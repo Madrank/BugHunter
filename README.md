@@ -1,38 +1,7 @@
-bug-collab/
-├── backend/
-│   ├── package.json
-│   ├── .env
-│   ├── src/
-│   │   ├── app.js
-│   │   ├── models/
-│   │   │   ├── index.js
-│   │   │   ├── User.js
-│   │   │   ├── Bug.js
-│   │   │   ├── Solution.js
-│   │   │   └── Vote.js
-│   │   ├── routes/
-│   │   │   ├── auth.js
-│   │   │   ├── bugs.js
-│   │   │   ├── solutions.js
-│   │   │   └── votes.js
-│   │   └── middleware/
-│   │       └── auth.js
-│   └── database.sql
-└── frontend/
-    ├── package.json
-    └── src/
-        ├── App.js
-        ├── pages/
-        │   ├── Home.js
-        │   ├── Login.js
-        │   ├── Register.js
-        │   ├── NewBug.js
-        │   └── BugDetail.js
-        └── components/
-            ├── CodeViewer.js
-            ├── DiffViewer.js
-            └── VoteButton.js
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-20.x-green)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-3.x-blue)](https://sqlite.org/)
 # BugHunter - Collaborative Debugging Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
