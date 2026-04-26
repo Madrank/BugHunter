@@ -33,27 +33,27 @@ bug-collab/
             ├── DiffViewer.js
             └── VoteButton.js
 
-# 🐛 BugHunter - Collaborative Debugging Platform
+# BugHunter - Collaborative Debugging Platform
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-20.x-green)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
 
-## 📖 Description
+## Description
 
 BugHunter est une plateforme collaborative où les développeurs peuvent partager des bugs et proposer des solutions. Inspiré de Stack Overflow et GitHub Gist, ce projet démontre mes compétences en développement fullstack.
 
-### ✨ Fonctionnalités
+### Fonctionnalités
 
-- 🔐 **Authentification JWT** - Inscription et connexion sécurisées
-- 🐛 **Gestion de bugs** - Création, modification et suppression de bugs
-- 💡 **Solutions collaboratives** - Proposez des corrections avec visualisation des changements (diff)
-- 👍 **Système de vote** - Upvote/downvote pour les meilleures solutions
-- 🏆 **Système de réputation** - Gagnez des points en aidant les autres
-- 🎨 **Syntax highlighting** - Affichage du code avec coloration syntaxique
-- 📱 **Responsive design** - Interface adaptée à tous les écrans
+- **Authentification JWT** - Inscription et connexion sécurisées
+- **Gestion de bugs** - Création, modification et suppression de bugs
+- **Solutions collaboratives** - Proposez des corrections avec visualisation des changements (diff)
+- **Système de vote** - Upvote/downvote pour les meilleures solutions
+- **Système de réputation** - Gagnez des points en aidant les autres
+- **Syntax highlighting** - Affichage du code avec coloration syntaxique
+- **Responsive design** - Interface adaptée à tous les écrans
 
-## 🛠️ Stack Technique
+## Stack Technique
 
 ### Backend
 - **Node.js** + **Express** - API RESTful
@@ -68,7 +68,7 @@ BugHunter est une plateforme collaborative où les développeurs peuvent partage
 - **React Router v6** - Navigation
 - **React Syntax Highlighter** - Coloration du code
 
-## 🚀 Installation
+## Installation
 
 ### Prérequis
 - Node.js (v18 ou supérieur)
