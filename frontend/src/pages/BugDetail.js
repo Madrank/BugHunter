@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 import CodeViewer from '../components/CodeViewer';
 import DiffViewer from '../components/DiffViewer';
 import VoteButton from '../components/VoteButton';
@@ -62,7 +63,12 @@ function BugDetail() {
           <span className="text-gray-400">by {bug.User?.username}</span>
           <span className="text-gray-400">⭐ {bug.User?.reputation} reputation</span>
         </div>
-        <p className="text-gray-300 mb-4">{bug.description}</p>
+        
+        {/* Support Markdown pour la description */}
+        <div className="prose prose-invert max-w-none mb-4">
+          <ReactMarkdown>{bug.description}</ReactMarkdown>
+        </div>
+        
         <h3 className="text-xl font-semibold mb-2">Code with bug:</h3>
         <CodeViewer code={bug.code_snippet} language={bug.language} />
       </div>
@@ -85,7 +91,9 @@ function BugDetail() {
               </div>
               
               {sol.explanation && (
-                <p className="text-gray-300 mb-3">{sol.explanation}</p>
+                <div className="prose prose-invert max-w-none mb-3">
+                  <ReactMarkdown>{sol.explanation}</ReactMarkdown>
+                </div>
               )}
               
               <h4 className="font-semibold mb-1">Fixed code:</h4>
@@ -108,7 +116,7 @@ function BugDetail() {
           <h3 className="text-xl font-semibold mb-4">Submit a Solution</h3>
           <form onSubmit={submitSolution} className="space-y-4">
             <textarea
-              placeholder="Explain your solution..."
+              placeholder="Explain your solution (Markdown supported!)..."
               className="w-full p-2 bg-gray-800 rounded h-24"
               value={solution.explanation}
               onChange={(e) => setSolution({...solution, explanation: e.target.value})}
