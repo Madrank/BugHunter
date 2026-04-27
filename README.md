@@ -50,3 +50,33 @@ cd backend
 npm install
 cp .env.example .env  # Configurez votre JWT_SECRET
 npm run dev
+
+## Améliorations futures
+
+Le projet est fonctionnel, mais plusieurs fonctionnalités sont prévues pour le faire évoluer :
+
+### À court terme
+- [ ] **WebSockets** - Notifications en temps réel quand une nouvelle solution est proposée
+- [ ] **Recherche avancée** - Filtrer les bugs par langage, tags ou statut
+- [ ] **Markdown support** - Pour les descriptions de bugs et explications des solutions
+- [ ] **Pagination** - Pour gérer un grand nombre de bugs et solutions
+
+### À moyen terme
+- [ ] **Éditeur de code intégré** - Avec auto-complétion et validation syntaxique
+- [ ] **Système de tags** - Catégoriser les bugs par technologie (React, Node.js, Python...)
+- [ ] **Export PDF** - Générer un rapport de bug ou une solution en PDF
+- [ ] **Tests automatisés** - Unitaires (Jest) et end-to-end (Cypress)
+
+### À long terme
+- [ ] **Versioning des solutions** - Historique des modifications d'une solution
+- [ ] **Gamification** - Badges et niveaux de réputation avancés
+- [ ] **API publique** - Exposer les bugs/solutions via une API REST documentée
+- [ ] **Dashboard analytics** - Statistiques sur les bugs résolus, votes, contributeurs actifs
+
+### Stack envisagée pour les évolutions
+- **WebSockets** : Socket.io
+- **Recherche** : Algolia ou PostgreSQL full-text
+- **Tests** : Jest + Supertest (backend), React Testing Library (frontend)
+- **Déploiement** : Docker + GitHub Actions (CI/CD)
+
+---
