@@ -22,10 +22,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const bug = await Bug.findByPk(req.params.id, {
-      include: [
-        { model: User, attributes: ['username', 'reputation'] },
-        { model: require('../models').Solution, include: [require('../models').User, require('../models').Vote] }
-      ]
+      include: [{ model: User, attributes: ['username', 'reputation'] }]
     });
     
     if (!bug) {
@@ -42,10 +39,18 @@ router.get('/:id', async (req, res) => {
 // POST new bug
 router.post('/', auth, async (req, res) => {
   try {
-    console.log('Creating bug for user:', req.user.id);
-    console.log('Request body:', req.body);
+    console.log('📝 Creating bug for user:', req.user.id);
+    console.log('📦 Request body:', req.body);
     
     const { title, code_snippet, description, language } = req.body;
+    
+    // Validation
+    if (!title || !code_snippet || !description || !language) {
+      return res.status(400).json({ 
+        message: 'Missing required fields',
+        required: ['title', 'code_snippet', 'description', 'language']
+      });
+    }
     
     const bug = await Bug.create({
       title,
@@ -55,11 +60,14 @@ router.post('/', auth, async (req, res) => {
       UserId: req.user.id
     });
     
-    console.log('Bug created:', bug.id);
+    console.log('✅ Bug created successfully, ID:', bug.id);
     res.status(201).json(bug);
   } catch (err) {
-    console.error('Error in POST /:', err);
-    res.status(500).json({ error: err.message });
+    console.error('❌ Error in POST /:', err);
+    res.status(500).json({ 
+      error: err.message,
+      stack: err.stack 
+    });
   }
 });
 
